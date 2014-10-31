@@ -1,7 +1,16 @@
 ---
-glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
-glyphicons-halflings.png: glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png
-rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 application.js: application-104244b2b920d121fd8243f772bea78b.js
+bootstrap.js: bootstrap-ef40a7640b6ae2e35f7c8350049f725b.js
+profiles.js: profiles-3af39f1da6f167c2cbf453ed74daff3d.js
+statuses.js: statuses-5fd62414302086d11ccd3dacfae19625.js
 application.css: application-7ecfbb36e2650a73acca9ceda1420aed.css
 bootstrap.css: bootstrap-9454768b7a51b2425160eab47a715ed5.css
+profiles.css: profiles-7270767b2a9e9fff880aa5de378ca791.css
+scaffolds.css: scaffolds-7270767b2a9e9fff880aa5de378ca791.css
+statuses.css: statuses-32d5685f815b9c1ea18b4fdeb036d728.css
+jquery-ui.js: jquery-ui-5e86558a29e9896e7842cba13e007b88.js
+jquery-ui.min.js: jquery-ui.min-0e56c874a8ff809a50525176c91a2457.js
+jquery.js: jquery-765cc76e15d62a88cd61468aeaaaeb5d.js
+jquery.min.js: jquery.min-df98e5c4627f90ac3a698395a3916d44.js
+jquery_ujs.js: jquery_ujs-b9220ba11605b6f2bfbeef4272fd7760.js
+coffee-script.js: coffee-script-2a8520487f6ab8e241a2a78b0bc6748d.js
