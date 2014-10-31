@@ -1,0 +1,11 @@
+Mam:
+  first_name: "Mam"
+  last_name: "mim"
+  email: "mam@treehouse.com"
+  profile_name: "mami"
+
+jim:
+  first_name: "jim"
+  last_name: "Hoskins"
+  email: "jim@teamtreehouse.com"
+  profile_name: "jimhoskins"
