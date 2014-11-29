@@ -1,0 +1,8 @@
+one:
+  user: Mam
+  friend: jim
+
+blocked_by_Mam:
+  user: Mam
+  friend: blocked_friend
+  state: 'blocked'

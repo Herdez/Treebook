@@ -1,22 +1,61 @@
 Treebook::Application.routes.draw do
   get "profiles/show"
 
-  devise_for :users
+  as :user do
+    get '/register', to: 'devise/registrations#new', as: :register
+    get '/login', to: 'devise/sessions#new', as: :login
+    get '/logout', to: 'devise/sessions#destroy', as: :logout
+    
+    get '/user_friendships/new', to: 'user_friendships#new', as: :new_user_friendships
+  
+    get '/user_friendships/:id/edit', to: 'user_friendships#edit', as: :edit_user_friendship
+  
+    get '/user_friendships/:id/accept', to: 'user_friendships#accept', as: :accept_user_friendship
 
-  devise_scope :user do
-    get 'register', to: 'devise/registrations#new', as: :register
-    get 'login', to: 'devise/sessions#new', as: :login
-    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get '/user_friendships/:id', to: 'user_friendships#destroy', as: :user_friendship
 
+
+    post '/user_friendships', to: 'user_friendships#create', as: :post_user_friendships
+
+    get '/user_friendships', to: 'user_friendships#index', as: :get_user_friendships
+
+    get '/user_friendships/:id/block', to: 'user_friendships#block', as: :block_user_friendships
+
+    get '/user_friendships/:id', to: 'user_friendships#show', as: :show_user_friendships
+
+
+  end
+
+  devise_for :users, skip: [:sessions]
+
+  as :user do
+    get "/login" => 'devise/sessions#new', as: :new_user_session
+    post "/login" => 'devise/sessions#create', as: :user_session
+    delete "/logout" => 'devise/sessions#destroy', as: :destroy_user_session
+  end
+
+  resources :user_friendship do
+    member do
+      put :accept
+      put :block
+    end
+  end
+  resources :user_friendships do
+    member do
+      put :accept
+      put :block
+    end
   end
 
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
   root to: 'statuses#index'
 
-  get '/:id', to: 'profiles#show'
+  get '/:id', to: 'profiles#show', as: 'profile'
 
-  #devise_for :users do
+  
+
+    #devise_for :users do
    # get '/users/sign_out' => 'devise/sessions#destroy'
   #end
 

@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require js-routes
 //= require_tree .
 //= require_self
+//= require application/routes
